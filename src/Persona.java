@@ -17,10 +17,9 @@ public class Persona extends PersonaApp.PersonaPOA{
             conex.conexion();
             Statement st = conex.conex.createStatement();
             int valor = st.executeUpdate(query);
-            if(valor > 0){
-                resultado = true;
+            if(valor>0){
+                return resultado= true; 
             }
-            //Cerramos recursos
             st.close();
             conex.conex.close();
         } catch (Exception e) {
